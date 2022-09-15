@@ -1,0 +1,142 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get the best jeans, boxers and shorts, shop online with worldwide shipping, free since $60 and up.">
+    <meta name="keywords" content="shop online, fashion, women fashion, ecommerce, clothes, jeans, online fashion, worldwide shopping, fashionshop, crop top, blackmamba, tendencia, style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="shortcut icon" href="./img/gif.gif" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&amp;family=Nanum+Pen+Script&amp;family=Sarpanch:wght@900&amp;display=swap" rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>BLACKMAMBA</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="./index.html">BLACKMAMBA</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Online Store</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="top.html">Top</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bottom.html">Bottom</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mambagang.html">Mamba Gang</a>
+                    </li>
+                    <div class="login">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="login.html">Log in</a>
+                      </li>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <div>
+            <div >
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle btn" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Sort by
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-dark " aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Popular</a></li>
+                    <li><a class="dropdown-item" id="menorPrecio" href="#">Lowest-Highest</a></li>
+                    <li><a class="dropdown-item" id="mayorPrecio" href="#">Highest-Lowest</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+        <div>
+        
+
+        <div id="carrito">
+          
+            <button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                VER TU CARRITO
+            </button>
+
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasScrollingLabel">TU CARRITO</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <table id="lista-carrito">
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th>Cantidad</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div class="compra">
+                      <div class="total">
+                        <h5>TOTAL</h5>
+                        <h4> $ <span id="precioTotal"></span> </h4>
+                      </div>
+                      <div class="btn-carrito">
+                        <div class="btn-vaciar">
+                          <a href="#" id="vaciar-carrito" class="btn">Vaciar Carrito</a>
+                        </div>
+                        <div class="finalizarCompra">
+                          <a href="#" id="finalizar" class="btn">Finalizar Compra</a>
+                        </div>
+                      </div>
+                    </div>
+                    
+                </div>
+            </div>        
+        </div>
+
+        <section id="productos">
+            <div id="productCard" class="row row-cols-1 row-cols-md-3 mt-2 g-4">
+                <!-- Codigo desde JS -->
+            </div>
+        </section>
+    </main>
+    <footer class="footer bg-light">
+        <div class="redes">
+            <h6><a href="https://instagram.com/beblackmamba"></a>beblackmamba</h6>
+            <h6><a href="shop@beblackmamba.com"></a>shop@beblackmamba.com</h6>
+        </div>
+        <div class="copyright">
+          <h6>© Copyright Blackmamba - 2022</h6>
+        </div>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.29/dist/sweetalert2.all.min.js"></script>
+
+    <!-- <script src="./js/data.js"></script> -->
+    <script src="./js/app.js"></script>
+
+</body></html>

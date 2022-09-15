@@ -1,0 +1,133 @@
+main .logos {
+    width: 25px;
+    height: 25px; }
+  
+  main .productos {
+    width: 100%; }
+    main .productos .row {
+      display: flex;
+      align-items: center;
+      margin: 0%;
+      margin-bottom: 30px; }
+      @media (min-width: 0px) and (max-width: 376px) {
+        main .productos .row .col {
+          width: 375px; } }
+      @media screen and (max-width: 426px) {
+        main .productos .row {
+          width: 425px; } }
+      main .productos .row .container {
+        position: relative; }
+      main .productos .row .card-img-top {
+        opacity: 1;
+        display: block;
+        transition: .6s ease;
+        backface-visibility: hidden; }
+      main .productos .row .text button {
+        background-color: black;
+        color: white;
+        font-size: 20px;
+        padding: 16px 32px; }
+  
+  .navbar .logos {
+    width: 25px;
+    height: 25px; }
+
+
+/*estilos agregado*/
+        .text{
+            display: flex;
+            justify-content: center;
+        }
+        #carrito{
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+
+        }
+        .btn{
+            border-radius: 0px;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            padding: 8px 16px;
+        }
+        .card-title{
+            text-align: center;
+        }
+        .agregar-carrito{
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 5px auto;
+        }
+        .redes h6{
+            text-align: center;
+        }
+        .copyright h6{
+            text-align: center;
+        }
+        .row{
+            margin-left: 0%;
+            margin-right: 0%;
+        }
+        .offcanvas-body{
+            display: inline-grid;   
+        }
+        .borrar{
+            text-decoration: none;
+            background-color: red;
+            color: white;
+            font-size: small;
+            padding: 3px 7px;
+            border-radius: 20px;
+        }
+        .agregado{
+            font-size: medium;
+            text-align: center;
+
+        }
+        .agregadoimg{
+          width: 80px;
+          height: 100px;
+        }
+        .precio{
+            font-weight: bold;
+        }
+        #vaciar-carrito, #finalizar{
+            display: flex;
+            align-self: flex-end;
+            justify-content: center;
+            padding: auto 20px;
+        }
+        th{
+            text-align: center;
+        }
+        .compra{
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: center;
+          align-content: center;
+        }
+        .btn-carrito{
+          display: flex;
+          width: 100%;
+          justify-content: space-around;
+        }
+        .total{
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 20px;
+        }
+
+        .navbar-nav{
+          background-color: black;
+          color: white;
+          margin: 30px;
+        }
+        .dropdown-menu{
+          width: 100%;
+        }

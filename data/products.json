@@ -1,0 +1,50 @@
+[
+    {
+        "img": "./img/top1.jpg",
+        "nombre": "CAMISA BLACKBERRY",
+        "info": "Camisa estampada Blackberry. Cartera con botones ocultos. Talle único, oversize, unisex.",
+        "precio": 8300,
+        "cant": 1,
+        "id": 1
+    },
+    {
+        "img": "./img/top2.jpg",
+        "nombre": "MUSCULOSA SEND NUDES OFF WHITE",
+        "info": "Musculosa de morley con spandex, estilo portaligas con detalles metálicos",
+        "precio": 5500,
+        "cant": 1,
+        "id": 2
+    },
+    {
+        "img": "./img/top3.jpg",
+        "nombre": "POLERA TIGRESA",
+        "info": "Polera estampada con logos. tela spandex. La imagen es referencial, el color puede variar.",
+        "precio": 6200,
+        "cant": 1,
+        "id": 3
+    },
+    {
+        "img": "./img/top4.jpg",
+        "nombre": "PECHERA BEVERLY HILLS NARANJA",
+        "info": "Pechera de creppe sastrero con breteles regulables con tancas. Ruedo en punta. Silueta anatómica.",
+        "precio": 4500,
+        "cant": 1,
+        "id": 4
+    },
+    {
+        "img": "./img/top5.jpg",
+        "nombre": "POLERA CELEBRITY",
+        "info": "Polera estampada con logos. tela spandex. La imagen es referencial, el color puede variar.",
+        "precio": 5500,
+        "cant": 1,
+        "id": 5
+    },
+    {
+        "img": "./img/top6.jpg",
+        "nombre": "POLERA MAMBA SKIN NEGRA",
+        "info": "Polera de microfibra con spandex color negro con logo blanco en cuello.",
+        "precio": 6000,
+        "cant": 1,
+        "id": 6
+    }
+]

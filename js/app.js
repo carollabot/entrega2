@@ -149,9 +149,8 @@ const renderizarListaProductos = () => {
 
 
 
-//PRUEBA DE FUNCIONES SORT BY 
-//RESOLVER COMO IMPRIMIR
-
+//PRUEBA DE FUNCIONES 
+/*
 function ordenarMayor(){
     const mayorPrecio = arrayProductos.sort((prod1, prod2) => {
         if(prod1.precio < prod2.precio) {
@@ -177,8 +176,9 @@ function ordenarMenor(){
 
     })
     console.log(menorPrecio)
-    renderizarListaProductos()
 }
+*/
+
 
 //FUNCIONES
 
@@ -230,7 +230,7 @@ function leerDatos(producto){
     if (existe) {
         const productoUpdate = articulosCarrito.find((producto) => producto.id === infoProducto.id)
         productoUpdate.cantidad ++ 
-        //multiplicar precio * cantidad
+        productoUpdate.precio = productoUpdate.precio * productoUpdate.cantidad
 
     } else {
         articulosCarrito.push(infoProducto)
@@ -265,8 +265,11 @@ function carritoHTML(){
         
     })
 
+
+    /*
     precioTotal.innerHTML = articulosCarrito.reduce((acc, prod) => acc+prod.precio, 0)
     console.log(precioTotal);
+    */
 
 
     sincroStorage();

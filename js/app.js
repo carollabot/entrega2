@@ -163,6 +163,8 @@ function ordenarMayor(){
 
     })
     console.log(mayorPrecio)
+
+    renderizarListaProductos(mayorPrecio)
 }
 function ordenarMenor(){
     const menorPrecio = arrayProductos.sort((prod1, prod2) => {
@@ -176,7 +178,8 @@ function ordenarMenor(){
 
     })
     console.log(menorPrecio)
-    renderizarListaProductos()
+
+    renderizarListaProductos(menorPrecio)
 }
 
 //FUNCIONES

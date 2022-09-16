@@ -7,12 +7,13 @@ const finalizar = document.querySelector("#finalizar")
 const productos = document.querySelector("#productos");
 const menorPrecio = document.querySelector("#menorPrecio");
 const mayorPrecio = document.querySelector("#mayorPrecio");
-let precioTotal = document.querySelector("#precioTotal")
+const precioTotal = document.querySelector("#precioTotal")
 // const arrayProductos = [producto1, producto2, producto3, producto4, producto5, producto6];
 
 let arrayProductos = []
 const cardQuery = document.querySelector("#productCard");
 let articulosCarrito = [];
+let preciosCarrito = [];
 
 
 //eventos
@@ -22,7 +23,6 @@ function cargarEventos(){
     productos.addEventListener("click", agregarProducto);
 
     carrito.addEventListener("click", eliminarProducto);
-
 
     //eventos para ordenar productos
     mayorPrecio.addEventListener("click", ordenarMayor);
@@ -57,7 +57,6 @@ function cargarEventos(){
                 articulosCarrito = [];
                 carritoHTML();
             } else if (
-              /* Read more about handling dismissals below */
               result.dismiss === Swal.DismissReason.cancel
             ) {
               
@@ -149,8 +148,9 @@ const renderizarListaProductos = () => {
 
 
 
-//PRUEBA DE FUNCIONES 
-/*
+//PRUEBA DE FUNCIONES SORT BY 
+//RESOLVER COMO IMPRIMIR
+
 function ordenarMayor(){
     const mayorPrecio = arrayProductos.sort((prod1, prod2) => {
         if(prod1.precio < prod2.precio) {
@@ -176,9 +176,8 @@ function ordenarMenor(){
 
     })
     console.log(menorPrecio)
+    renderizarListaProductos()
 }
-*/
-
 
 //FUNCIONES
 
@@ -223,7 +222,6 @@ function leerDatos(producto){
         id: producto.querySelector("button").getAttribute("data-id"),
         cantidad: 1
     }
-    Number(infoProducto.precio)
 
     //revisar si ya existe producto
     const existe = articulosCarrito.some( producto => producto.id === infoProducto.id )
@@ -263,13 +261,17 @@ function carritoHTML(){
 
         listaCarrito.appendChild(row);
         
+
+        //no
+        preciosCarrito = [ producto.precio]
+        console.log(preciosCarrito)
+        
     })
+    
 
-
-    /*
-    precioTotal.innerHTML = articulosCarrito.reduce((acc, prod) => acc+prod.precio, 0)
+    //no
+    precioTotal.innerHTML = articulosCarrito.reduce((acc, prod) => acc + prod.precio , 0)
     console.log(precioTotal);
-    */
 
 
     sincroStorage();

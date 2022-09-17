@@ -7,6 +7,7 @@ const finalizar = document.querySelector("#finalizar")
 const productos = document.querySelector("#productos");
 const menorPrecio = document.querySelector("#menorPrecio");
 const mayorPrecio = document.querySelector("#mayorPrecio");
+const popular = document.querySelector("#popular");
 const precioTotal = document.querySelector("#precioTotal")
 // const arrayProductos = [producto1, producto2, producto3, producto4, producto5, producto6];
 
@@ -27,6 +28,7 @@ function cargarEventos(){
     //eventos para ordenar productos
     mayorPrecio.addEventListener("click", ordenarMayor);
     menorPrecio.addEventListener("click", ordenarMenor);
+    popular.addEventListener("click", ordenarPopular);
 
     document.addEventListener("DOMContentLoaded", () => {
         articulosCarrito = JSON.parse( localStorage.getItem("carrito")) || [];
@@ -111,7 +113,6 @@ function cargarEventos(){
 }
 
 
-
 //FETCH
 
 const getProd = async () => {
@@ -152,6 +153,7 @@ const renderizarListaProductos = () => {
 //RESOLVER COMO IMPRIMIR
 
 function ordenarMayor(){
+
     const mayorPrecio = arrayProductos.sort((prod1, prod2) => {
         if(prod1.precio < prod2.precio) {
             return 1;
@@ -163,9 +165,12 @@ function ordenarMayor(){
 
     })
     console.log(mayorPrecio)
-
+    
+    cardQuery.innerHTML = ""
     renderizarListaProductos(mayorPrecio)
+    
 }
+
 function ordenarMenor(){
     const menorPrecio = arrayProductos.sort((prod1, prod2) => {
         if(prod1.precio < prod2.precio) {
@@ -178,8 +183,13 @@ function ordenarMenor(){
 
     })
     console.log(menorPrecio)
-
+    cardQuery.innerHTML = ""
     renderizarListaProductos(menorPrecio)
+}
+
+function ordenarPopular(){
+    cardQuery.innerHTML = ""
+    getProd()
 }
 
 //FUNCIONES
@@ -265,17 +275,22 @@ function carritoHTML(){
         listaCarrito.appendChild(row);
         
 
-        //no
+        /*
         preciosCarrito = [ producto.precio]
         console.log(preciosCarrito)
+        */
         
     })
     
 
     //no
-    precioTotal.innerHTML = articulosCarrito.reduce((acc, prod) => acc + prod.precio , 0)
-    console.log(precioTotal);
+    var total = "";
+    for(var i = 0; i < articulosCarrito.length; i++) {
+        total = total + articulosCarrito[i].precio;
+    }
+    precioTotal.innerHTML = total
 
+    console.log(precioTotal);
 
     sincroStorage();
 
@@ -289,6 +304,7 @@ function sincroStorage(){
 function limpiarHTML() {
     listaCarrito.innerHTML = ""
 }
+
 
 //EJECUTAR
 getProd()

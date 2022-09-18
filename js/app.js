@@ -164,7 +164,6 @@ function ordenarMayor(){
         return 0;
 
     })
-    console.log(mayorPrecio)
     
     cardQuery.innerHTML = ""
     renderizarListaProductos(mayorPrecio)
@@ -182,7 +181,6 @@ function ordenarMenor(){
         return 0;
 
     })
-    console.log(menorPrecio)
     cardQuery.innerHTML = ""
     renderizarListaProductos(menorPrecio)
 }
@@ -274,11 +272,6 @@ function carritoHTML(){
 
         listaCarrito.appendChild(row);
         
-
-        /*
-        preciosCarrito = [ producto.precio]
-        console.log(preciosCarrito)
-        */
         
     })
     
@@ -289,8 +282,6 @@ function carritoHTML(){
         total = total + articulosCarrito[i].precio;
     }
     precioTotal.innerHTML = total
-
-    console.log(precioTotal);
 
     sincroStorage();
 

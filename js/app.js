@@ -8,13 +8,9 @@ const productos = document.querySelector("#productos");
 const menorPrecio = document.querySelector("#menorPrecio");
 const mayorPrecio = document.querySelector("#mayorPrecio");
 const popular = document.querySelector("#popular");
-const precioTotal = document.querySelector("#precioTotal")
-// const arrayProductos = [producto1, producto2, producto3, producto4, producto5, producto6];
-
 let arrayProductos = []
 const cardQuery = document.querySelector("#productCard");
 let articulosCarrito = [];
-let preciosCarrito = [];
 
 
 //eventos
@@ -148,9 +144,7 @@ const renderizarListaProductos = () => {
 }
 
 
-
-//PRUEBA DE FUNCIONES SORT BY 
-//RESOLVER COMO IMPRIMIR
+//FUNCIONES
 
 function ordenarMayor(){
 
@@ -190,15 +184,11 @@ function ordenarPopular(){
     getProd()
 }
 
-//FUNCIONES
-
 function agregarProducto(e){
     e.preventDefault();
     if(e.target.classList.contains("agregar-carrito")){
         const seleccionado = e.target.parentElement.parentElement.parentElement;
         leerDatos (seleccionado);
-
-        //AGREGAR SWEET ALERT
         
         Swal.fire({
             toast: true,
@@ -210,7 +200,6 @@ function agregarProducto(e){
         })
     }
 }
-
 
 
 function eliminarProducto(e){
@@ -272,17 +261,8 @@ function carritoHTML(){
 
         listaCarrito.appendChild(row);
         
-        
     })
     
-
-    //no
-    var total = "";
-    for(var i = 0; i < articulosCarrito.length; i++) {
-        total = total + articulosCarrito[i].precio;
-    }
-    precioTotal.innerHTML = total
-
     sincroStorage();
 
 }
